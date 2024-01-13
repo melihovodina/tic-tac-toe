@@ -1,11 +1,13 @@
-  html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #002; 
-    font-family: 'friz-quadrata';
-  }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #002; 
+  font-family: 'friz-quadrata';
+  overflow: hidden;
+}
+
 
   #root {
     height: 100%;
@@ -20,91 +22,9 @@
     height: 100%;
   }
 
-  .game {
-    height: 100%;
-    width: 100%;
-    display: flex;  
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .game-board {
-    margin: 0 0 0 23%;
-  }
-  
-  .game-info{
-    height: 100%;
-    margin: 0 23% 0 0;
-    align-items: top;
-  }
-
-  .board-row {
-    display: flex;
-    justify-content: center;
-  }
-
-  .square {
-    padding: 0;
-    width: 6vw;
-    height: 12vh;
-    line-height: 12vh;
-    margin: 2px;
-    background: transparent;
-    border: 3px solid lightgreen;
-    border-radius:15px;
-    cursor: pointer;
-    filter: drop-shadow(0 0 15px lightgreen);
-    transition: border 0.4s ease-in-out;
-  }
-  
-  .square:hover {
-    border-color: white;
-    filter: drop-shadow(0 0 15px white);
-  }
-  
-  .square.X.clicked {
-    border-color: red;
-    filter: drop-shadow(0 0 15px red);
-  }
-  
-  .square.O.clicked {
-    border-color: blue;
-    filter: drop-shadow(0 0 15px blue);
-  }
-  
-  @keyframes redBorder {
-    0% { border-color: lightgreen; }
-    100% { border-color: red; }
-  }
-  
-  @keyframes blueBorder {
-    0% { border-color: lightgreen; }
-    100% { border-color: blue; }
-  }  
-
-  .history-button {
-    padding: 0.5vh 0.5vw;
-    margin-bottom: 1vh;
-    border: 3px solid lightgreen;
-    background: transparent;
-    border-radius:15px;
-    cursor: pointer;
-    filter: drop-shadow(0 0 15px lightgreen);
-    animation: buttonFadeIn 0.6s ease-in-out forwards;
-}
-
-@keyframes buttonFadeIn {
-    0% {
-      opacity: 0;
-      border: 3px solid transparent;
-    }
-    100% {
-      opacity: 1;
-      border: 3px solid lightgreen;
-    }
-}
-
   p {
+    padding: 0;
+    margin: 0;
     color: aqua;
     font-size: 1em;
     text-align: center;

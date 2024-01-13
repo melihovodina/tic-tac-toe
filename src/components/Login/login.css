@@ -1,0 +1,114 @@
+.login {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.login_form, .code_form {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px solid lightgreen;
+    filter: drop-shadow(0 0 15px lightgreen);
+    border-radius:15px;
+    margin-bottom: 5%;
+}
+.main-input{
+    color: aqua;
+    font-family: 'friz-quadrata';
+    font-size: 1em;
+    line-height: 5%;
+    background: transparent;
+    border: 0;
+    width: 100%;
+    height: 40%;
+    box-sizing: border-box;
+    border-bottom: 2px solid #5B6787;
+    margin-bottom: 20%;
+    padding-left: 1%;
+    outline: 0;
+  }
+  .main-input::placeholder{
+    color: #5B6787;
+    line-height: 5%;
+    font-family: 'friz-quadrata';
+    font-weight: 300;
+    font-size: 1em;
+  }
+  .validate-input{
+      position: relative;
+  }
+  .focus-main-input::before{
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 60%;
+      left: 0;
+      width: 0;
+      height: 3%;
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s;
+      background: lightgreen;
+      filter: drop-shadow(0 0 15px lightgreen);
+  }
+  .main-input:focus + .focus-main-input::before{
+      width: 100%;
+  }
+  .login_button {
+    padding: 1vh 1vw;
+    margin-bottom: 1vh;
+    border: 3px solid lightgreen;
+    background: transparent;
+    border-radius:15px;
+    cursor: pointer;
+}
+
+.login_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.link {
+    color: aqua;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .fadeOut {
+    animation: fadeOut 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+    
+  .spinner {
+    color: lightgreen;
+    margin-top: 0.125rem;
+    animation: spin 1s linear infinite;
+}
